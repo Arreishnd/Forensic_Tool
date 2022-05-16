@@ -11,7 +11,7 @@ import static java.lang.System.out;
 public class Email_parser {
 
     public static void main(String[] args) {
-        String pstFile = "C:\\Users\\edjan\\Desktop\\outlook.pst"; //set pstFile into args[1]
+        String pstFile = "C:\\Users\\UserOne\\Desktop\\outlook.pst"; //set pstFile into args[1]
         String o = parseEmail(pstFile);
         out.println(o);
     }
