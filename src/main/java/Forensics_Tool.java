@@ -23,18 +23,18 @@ public class Forensics_Tool {
                 out.println("Time zone:\n" + getSystem_InfoTime);
             }
             case "-r" -> {
-                //C:\Users\edjan\Desktop\NTUSER.DAT;
                 runCommand = String.format("RECmd.exe -f \"%s\"\\NTUSER.DAT --kn \"Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSaveMRU\\*\" --nl --sa --bn", args[1]);
                 out.println(getCommand(runCommand));
             }
             case "-u" -> {
-                //C:\Users\edjan\Desktop\NTUSER.DAT;
                 runCommand = String.format("RECmd.exe -f \"%s\"\\NTUSER.DAT --kn \"Software\\Microsoft\\Internet Explorer\\TypedURLs\" --nl --sa --bn", args[1]);
                 out.println(getData(getCommand(runCommand), "Data:"));
             }
             case "-e" -> out.println("run Email_parser");
             //Email_parser.parseEmail(args[1]);//throws errors
+                
             case "-h" -> printError();
+                
             default -> {
                 out.println("Argument not found: -help for more information");
                 printError();
